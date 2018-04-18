@@ -1,0 +1,9 @@
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\bin\Debug\netcoreapp1.1\rectanglesApp.deps.json
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\bin\Debug\netcoreapp1.1\rectanglesApp.runtimeconfig.json
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\bin\Debug\netcoreapp1.1\rectanglesApp.runtimeconfig.dev.json
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\bin\Debug\netcoreapp1.1\rectanglesApp.dll
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\bin\Debug\netcoreapp1.1\rectanglesApp.pdb
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\obj\Debug\netcoreapp1.1\rectanglesApp.csprojResolveAssemblyReference.cache
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\obj\Debug\netcoreapp1.1\rectanglesApp.AssemblyInfo.cs
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\obj\Debug\netcoreapp1.1\rectanglesApp.dll
+C:\GitHub\rectangles\rectanglesApp\rectanglesApp\obj\Debug\netcoreapp1.1\rectanglesApp.pdb
