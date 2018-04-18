@@ -14,7 +14,7 @@ namespace rectanglesApp
 
         public Point vertexBottomRight { get; set; }
 
-        //middle point
+        //middle point x,y
         public decimal x { get; set; }
 
         public decimal y { get; set; }
@@ -41,6 +41,22 @@ namespace rectanglesApp
             SetMiddlePoint();
             SetWidht();
             SetHeight();
+
+            SetHashCodeToVertexes();
+        }
+
+
+        private void SetHashCodeToVertexes()
+        {
+
+            vertexTopLeft.hashCode = GetHashCode();
+
+            vertexTopRight.hashCode = GetHashCode();
+
+            vertexBottomLeft.hashCode = GetHashCode();
+
+            vertexBottomRight.hashCode = GetHashCode();
+
         }
 
         private void SetWidht()
@@ -107,24 +123,24 @@ namespace rectanglesApp
 
         public override int GetHashCode()
         {
-            return int.Parse(x.ToString() + Math.Truncate(y).ToString());
+            return int.Parse(Math.Truncate(x).ToString() + Math.Truncate(y).ToString());
         }
     }
 
 }
 
-    ////TODO this method should be moved to the Grid class, 
-    //public static int OverlappedArea(Rectangle rectangleOne, Rectangle rectangleTwo)
-    //{
-    //    //var rectangleOneArea = rectangleOne.Area();
-    //    //var rectangleTwoArea = rectangleTwo.Area();
+////TODO this method should be moved to the Grid class, 
+//public static int OverlappedArea(Rectangle rectangleOne, Rectangle rectangleTwo)
+//{
+//    //var rectangleOneArea = rectangleOne.Area();
+//    //var rectangleTwoArea = rectangleTwo.Area();
 
-    //    int areaOverlapped = (Math.Min(rectangleOne.vertexTwo.x, rectangleTwo.vertexTwo.x) -
-    //                         Math.Max(rectangleOne.vertexOne.x, rectangleTwo.vertexOne.x)) *
-    //                         (Math.Min(rectangleOne.vertexTwo.y, rectangleTwo.vertexTwo.y) -
-    //                         Math.Max(rectangleOne.vertexOne.y, rectangleTwo.vertexOne.y));
+//    int areaOverlapped = (Math.Min(rectangleOne.vertexTwo.x, rectangleTwo.vertexTwo.x) -
+//                         Math.Max(rectangleOne.vertexOne.x, rectangleTwo.vertexOne.x)) *
+//                         (Math.Min(rectangleOne.vertexTwo.y, rectangleTwo.vertexTwo.y) -
+//                         Math.Max(rectangleOne.vertexOne.y, rectangleTwo.vertexOne.y));
 
-    //    //return (rectangleOneArea + rectangleTwoArea - areaOverlapped);
-    //    return areaOverlapped;
-    //}
+//    //return (rectangleOneArea + rectangleTwoArea - areaOverlapped);
+//    return areaOverlapped;
+//}
 

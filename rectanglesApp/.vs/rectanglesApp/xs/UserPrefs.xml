@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{D3EFF328-A66E-4C03-895B-2DB0B77026BB}|Default">
+  <MonoDevelop.Ide.ItemProperties.rectanglesApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="rectanglesApp/Point.cs">
+    <Files>
+      <File FileName="rectanglesApp/Quadtree.cs" Line="202" Column="1" />
+      <File FileName="rectanglesApp/Rectangle.cs" Line="147" Column="1" />
+      <File FileName="rectanglesApp/Program.cs" Line="68" Column="2" />
+      <File FileName="rectanglesApp/Point.cs" Line="14" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

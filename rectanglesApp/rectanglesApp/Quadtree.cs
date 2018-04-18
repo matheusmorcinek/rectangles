@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace rectanglesApp
 {
@@ -21,6 +22,12 @@ namespace rectanglesApp
         private Quadtree southWest;
 
         private Quadtree southEast;
+
+        //rectangles stored in the Dictionary 
+        Dictionary<int, Rectangle> rectangleDictionary;
+
+        Dictionary<string, int> areaColorResponse;
+
 
         public Quadtree(Rectangle boundary, int rectangleCapacity)
         {
@@ -46,6 +53,74 @@ namespace rectanglesApp
 
             points = new List<Point>();
         }
+
+        public bool InsertRectangle(Rectangle rectangle)
+        {
+
+            if (!rectangle.Intersects(boundary))
+            {
+                return false;
+            }
+
+            if (rectangleDictionary == null)
+            {
+                rectangleDictionary = new Dictionary<int, Rectangle>();
+            }
+
+            rectangleDictionary.Add(rectangle.GetHashCode(), rectangle);
+
+            //TODO not working well,
+            List<Point> pointsFound = Query(rectangle);
+
+
+            if (pointsFound.Count > 0)
+            {
+                //distinct
+                pointsFound.GroupBy(x => x.hashCode).Select(x => x.First());
+                var relatedRectangles = GetRelatedRectangles(pointsFound);
+
+            }
+
+            //last step
+            Insert(rectangle.vertexTopLeft);
+            Insert(rectangle.vertexTopRight);
+            Insert(rectangle.vertexBottomLeft);
+            Insert(rectangle.vertexBottomRight);
+
+
+            //TODO return the rectangles that rectangle being sent overlap
+
+            //than calculates the area being overlapped and add in the hash result
+
+
+            //after get the points of the dictionary, order by rectangles by the zindex
+            //only after that calculates the area and sent to the hash response
+
+
+            return true;
+        }
+
+        private List<Rectangle> GetRelatedRectangles(List<Point> pointsFound)
+        {
+
+            List<Rectangle> rectangles = new List<Rectangle>();
+
+            foreach (Point point in pointsFound)
+            {
+
+                Rectangle rectangle;
+                rectangleDictionary.TryGetValue(point.hashCode, out rectangle);
+
+                if (rectangle != null)
+                {
+                    rectangles.Add(rectangle);
+                }
+
+            }
+
+            return rectangles;
+        }
+
 
         public bool Insert(Point point)
         {

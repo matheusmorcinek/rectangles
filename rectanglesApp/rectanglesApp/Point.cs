@@ -8,6 +8,8 @@ namespace rectanglesApp
         public int x { get; set; }
         public int y { get; set; }
 
+        public int hashCode { get; set; }
+
         public Point(int x, int y)
         {
             this.x = x;

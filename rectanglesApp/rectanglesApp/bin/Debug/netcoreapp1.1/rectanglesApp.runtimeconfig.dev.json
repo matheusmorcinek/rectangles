@@ -1,7 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\mmorc\\.nuget\\packages"
+      "/Users/diegobatista/.dotnet/store/|arch|/|tfm|",
+      "/Users/diegobatista/.nuget/packages"
     ]
   }
 }
