@@ -29,10 +29,10 @@ namespace rectanglesApp
             {
                 throw new Exception("boundary is null");
             }
-            if (!(boundary.GetType().Equals("Rectangle")))
-            {
-                throw new Exception("boundary should be a Rectangle");
-            }
+            //if (!(boundary.GetType().Equals("Rectangle")))
+            //{
+            //    throw new Exception("boundary should be a Rectangle");
+            //}
             if (rectangleCapacity < 1)
             {
                 throw new Exception("capacity must be greater than 0");
