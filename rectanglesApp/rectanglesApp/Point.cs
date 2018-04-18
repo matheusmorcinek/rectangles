@@ -13,7 +13,11 @@ namespace rectanglesApp
             this.x = x;
             this.y = y;
         }
-        
+
+        public Point()
+        {
+        }
+
         public override string ToString()
         {
             return ("(x" + x + " - y" + y + ")");

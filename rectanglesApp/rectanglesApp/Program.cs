@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace rectanglesApp
 {
@@ -6,13 +7,23 @@ namespace rectanglesApp
     {
         static void Main(string[] args)
         {
+            
+            Dictionary<int, Rectangle> rectangleDictionary = new Dictionary<int, Rectangle>();
 
             int boundary = 10;
             Quadtree quadtree = new Quadtree(new Rectangle(boundary / 2, boundary / 2, boundary / 2, boundary / 2 ), 4);
 
-            Rectangle azul = new Rectangle(5, 5, 1, 1);
+            Rectangle azul = new Rectangle(new Point() { x = 2, y = 1 }, new Point() { x = 4, y = 6 });
             Rectangle varmelho = new Rectangle(8, 8, 2, 2);
-         
+
+
+            var numberhash = azul.GetHashCode();
+            rectangleDictionary.Add(azul.GetHashCode(), azul);
+
+            Rectangle response;
+            var test = rectangleDictionary.TryGetValue(numberhash, out response);
+            var hgfhfg = rectangleDictionary.TryGetValue(1232, out response);
+
             quadtree.Insert(new Point() { x = 3, y = 3 });
             quadtree.Insert(new Point() { x = 7, y = 8 });  
 
